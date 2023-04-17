@@ -1,42 +1,108 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
+  margin: 0 auto;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+body {
+  background: #1f1f1f;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1 {
+  color: rgb(32, 255, 84);
+  text-shadow: 0 0 20px rgb(32, 255, 84);
+  font-size: 50px;
+  font-weight: bolder;
+  margin-top: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+input {
+  display: block;
+  width: 90%;
+  max-width: 500px;
+  height: 50px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: #1f1f1fe9;
+  padding: 10px;
 }
 
-.card {
-  padding: 2em;
+button {
+  display: block;
+  width: 90%;
+  max-width: 500px;
+  height: 80px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  background-color: #1f1f1f;
+  box-shadow: 0 0 5px 0 rgb(255, 255, 255);
+  color: rgb(32, 255, 84);
+  text-shadow: 0 0 20px rgb(32, 255, 84);
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  padding-bottom: 5px;
 }
 
-.read-the-docs {
-  color: #888;
+button:active {
+  background: #fff;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 90%;
+  max-width: 500px;
+  margin-top: 50px;
+}
+
+li {
+  display: flex;
+  margin-left: 0;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+li.completed>.text {
+  opacity: .3;
+  text-decoration: line-through;
+}
+
+li .text{
+  text-align: left;
+}
+
+li .delete {
+  display: grid;
+  place-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  padding-bottom: 5px;
+  margin-left: 10px;
+  border: 2px solid rgb(32, 255, 84);
+  box-shadow: 0 0 8px 0 rgb(32, 255, 84);
+  cursor: pointer;
+  transition: box-shadow .2s;
+  transform: rotate(-45deg);
+}
+
+li .delete:active {
+  background: rgb(32, 255, 84);
+  box-shadow: 0 0 20px 0 rgb(32, 255, 84);
+  color: rgb(32, 255, 84);
 }
